@@ -1,0 +1,2549 @@
+{
+  "elements": [
+    {
+      "type": "Label",
+      "caption": "Wohnbereich 2.0.1 · Tablet-Hauptseite mit weiteren Räumen"
+    },
+    {
+      "type": "ExpansionPanel",
+      "caption": "Allgemein",
+      "items": [
+        {
+          "type": "ValidationTextBox",
+          "name": "Title",
+          "caption": "Titel in der Kachel (unabhängig vom Instanznamen)"
+        },
+        {
+          "type": "CheckBox",
+          "name": "ShowTitle",
+          "caption": "Titel anzeigen"
+        },
+        {
+          "type": "CheckBox",
+          "name": "ShowSummary",
+          "caption": "Gesamtstatus anzeigen"
+        },
+        {
+          "type": "SelectColor",
+          "name": "BackgroundColor",
+          "caption": "Hintergrundfarbe"
+        },
+        {
+          "type": "SelectColor",
+          "name": "TextColor",
+          "caption": "Schriftfarbe"
+        },
+        {
+          "type": "Label",
+          "caption": "Die drei Bereiche stehen in einem gemeinsamen Raumbild. Die Bedienung wird über die Bereichsauswahl unter dem Bild gewählt. Nur aktivierte Kreise und gewählte Funktionen werden angezeigt. Der Instanzname wird nicht verändert."
+        }
+      ]
+    },
+    {
+      "type": "ExpansionPanel",
+      "caption": "Weitere Räume · Bedienseite ohne Grafik",
+      "items": [
+        {
+          "type": "CheckBox",
+          "name": "OtherRoomsEnabled",
+          "caption": "Zusätzliche Raumseite aktivieren"
+        },
+        {
+          "type": "ValidationTextBox",
+          "name": "OtherRoomsTitle",
+          "caption": "Bezeichnung der zusätzlichen Seite"
+        },
+        {
+          "type": "Label",
+          "caption": "Vorhandene CMelektro-Raumkachel-Instanzen auswählen. Die aktivierten Geräte und Variablenzuordnungen werden übernommen. Nur hier aktivierte Räume sind über diese Tabletseite bedienbar. Bis zu 24 Räume; keine erneute Variablenzuordnung erforderlich."
+        },
+        {
+          "type": "List",
+          "name": "OtherRooms",
+          "caption": "Räume auf dem Tablet",
+          "rowCount": 7,
+          "add": true,
+          "delete": true,
+          "changeOrder": true,
+          "columns": [
+            {
+              "name": "Enabled",
+              "caption": "Aktiv",
+              "width": "70px",
+              "add": true,
+              "edit": {
+                "type": "CheckBox"
+              }
+            },
+            {
+              "name": "Instance",
+              "caption": "Raumkachel-Instanz",
+              "width": "280px",
+              "add": 0,
+              "edit": {
+                "type": "SelectInstance",
+                "validModules": [
+                  "{95207FE5-8A45-4275-9F0A-0A4965D8CD58}"
+                ]
+              }
+            },
+            {
+              "name": "Name",
+              "caption": "Anzeigename (optional)",
+              "width": "auto",
+              "add": "",
+              "edit": {
+                "type": "ValidationTextBox"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ExpansionPanel",
+      "caption": "Küche",
+      "items": [
+        {
+          "type": "CheckBox",
+          "name": "KitchenEnabled",
+          "caption": "Küche anzeigen"
+        },
+        {
+          "type": "ValidationTextBox",
+          "name": "KitchenName",
+          "caption": "Bereichsbezeichnung"
+        },
+        {
+          "type": "ExpansionPanel",
+          "caption": "Lichtkreis 1",
+          "items": [
+            {
+              "type": "CheckBox",
+              "name": "KitchenLight1Enabled",
+              "caption": "Lichtkreis aktiv"
+            },
+            {
+              "type": "ValidationTextBox",
+              "name": "KitchenLight1Name",
+              "caption": "Bezeichnung"
+            },
+            {
+              "type": "Select",
+              "name": "KitchenLight1Type",
+              "caption": "Leuchtenart",
+              "options": [
+                {
+                  "caption": "Hängelampe",
+                  "value": "pendant"
+                },
+                {
+                  "caption": "Stehlampe",
+                  "value": "floor"
+                },
+                {
+                  "caption": "Spots",
+                  "value": "spots"
+                },
+                {
+                  "caption": "LED-Leiste",
+                  "value": "led"
+                },
+                {
+                  "caption": "Panelleuchte",
+                  "value": "panel"
+                },
+                {
+                  "caption": "Wandleuchte",
+                  "value": "wall"
+                },
+                {
+                  "caption": "Wegelicht (Wandeinbau, bodennah)",
+                  "value": "path"
+                }
+              ]
+            },
+            {
+              "type": "CheckBox",
+              "name": "KitchenLight1UseSwitch",
+              "caption": "Ein/Aus anzeigen"
+            },
+            {
+              "type": "SelectVariable",
+              "name": "KitchenLight1Switch",
+              "caption": "Schaltbefehl (Boolean)",
+              "validVariableTypes": [
+                0
+              ]
+            },
+            {
+              "type": "SelectVariable",
+              "name": "KitchenLight1SwitchStatus",
+              "caption": "Schaltrückmeldung (optional)",
+              "validVariableTypes": [
+                0
+              ]
+            },
+            {
+              "type": "CheckBox",
+              "name": "KitchenLight1UseDim",
+              "caption": "Dimmregler anzeigen"
+            },
+            {
+              "type": "SelectVariable",
+              "name": "KitchenLight1Dim",
+              "caption": "Absoluter Dimmwert",
+              "validVariableTypes": [
+                1,
+                2
+              ]
+            },
+            {
+              "type": "SelectVariable",
+              "name": "KitchenLight1DimStatus",
+              "caption": "Dimmwertrückmeldung (optional)",
+              "validVariableTypes": [
+                1,
+                2
+              ]
+            },
+            {
+              "type": "Select",
+              "name": "KitchenLight1Maximum",
+              "caption": "Dimmwertebereich",
+              "options": [
+                {
+                  "caption": "0–100 %",
+                  "value": 100
+                },
+                {
+                  "caption": "0–255",
+                  "value": 255
+                },
+                {
+                  "caption": "0–1 (Float)",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "type": "CheckBox",
+              "name": "KitchenLight1AutoPosition",
+              "caption": "Leuchte automatisch passend zum Raum platzieren"
+            },
+            {
+              "type": "NumberSpinner",
+              "name": "KitchenLight1X",
+              "caption": "Manuell: Position im Bild: X (0–1000)",
+              "minimum": 0,
+              "maximum": 1000
+            },
+            {
+              "type": "NumberSpinner",
+              "name": "KitchenLight1Y",
+              "caption": "Manuell: Position im Bild: Y (0–650)",
+              "minimum": 0,
+              "maximum": 650
+            },
+            {
+              "type": "NumberSpinner",
+              "name": "KitchenLight1Scale",
+              "caption": "Manuell: Größe im Bild (%)",
+              "minimum": 30,
+              "maximum": 180
+            },
+            {
+              "type": "Label",
+              "caption": "Automatik passt Position, Größe und Lichtfläche an Raum und Leuchtenart an. Im Treppenhaus verläuft die LED-Leiste entlang des Aufgangs. Für eigene Positionen die Automatik deaktivieren."
+            }
+          ]
+        },
+        {
+          "type": "ExpansionPanel",
+          "caption": "Lichtkreis 2",
+          "items": [
+            {
+              "type": "CheckBox",
+              "name": "KitchenLight2Enabled",
+              "caption": "Lichtkreis aktiv"
+            },
+            {
+              "type": "ValidationTextBox",
+              "name": "KitchenLight2Name",
+              "caption": "Bezeichnung"
+            },
+            {
+              "type": "Select",
+              "name": "KitchenLight2Type",
+              "caption": "Leuchtenart",
+              "options": [
+                {
+                  "caption": "Hängelampe",
+                  "value": "pendant"
+                },
+                {
+                  "caption": "Stehlampe",
+                  "value": "floor"
+                },
+                {
+                  "caption": "Spots",
+                  "value": "spots"
+                },
+                {
+                  "caption": "LED-Leiste",
+                  "value": "led"
+                },
+                {
+                  "caption": "Panelleuchte",
+                  "value": "panel"
+                },
+                {
+                  "caption": "Wandleuchte",
+                  "value": "wall"
+                },
+                {
+                  "caption": "Wegelicht (Wandeinbau, bodennah)",
+                  "value": "path"
+                }
+              ]
+            },
+            {
+              "type": "CheckBox",
+              "name": "KitchenLight2UseSwitch",
+              "caption": "Ein/Aus anzeigen"
+            },
+            {
+              "type": "SelectVariable",
+              "name": "KitchenLight2Switch",
+              "caption": "Schaltbefehl (Boolean)",
+              "validVariableTypes": [
+                0
+              ]
+            },
+            {
+              "type": "SelectVariable",
+              "name": "KitchenLight2SwitchStatus",
+              "caption": "Schaltrückmeldung (optional)",
+              "validVariableTypes": [
+                0
+              ]
+            },
+            {
+              "type": "CheckBox",
+              "name": "KitchenLight2UseDim",
+              "caption": "Dimmregler anzeigen"
+            },
+            {
+              "type": "SelectVariable",
+              "name": "KitchenLight2Dim",
+              "caption": "Absoluter Dimmwert",
+              "validVariableTypes": [
+                1,
+                2
+              ]
+            },
+            {
+              "type": "SelectVariable",
+              "name": "KitchenLight2DimStatus",
+              "caption": "Dimmwertrückmeldung (optional)",
+              "validVariableTypes": [
+                1,
+                2
+              ]
+            },
+            {
+              "type": "Select",
+              "name": "KitchenLight2Maximum",
+              "caption": "Dimmwertebereich",
+              "options": [
+                {
+                  "caption": "0–100 %",
+                  "value": 100
+                },
+                {
+                  "caption": "0–255",
+                  "value": 255
+                },
+                {
+                  "caption": "0–1 (Float)",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "type": "CheckBox",
+              "name": "KitchenLight2AutoPosition",
+              "caption": "Leuchte automatisch passend zum Raum platzieren"
+            },
+            {
+              "type": "NumberSpinner",
+              "name": "KitchenLight2X",
+              "caption": "Manuell: Position im Bild: X (0–1000)",
+              "minimum": 0,
+              "maximum": 1000
+            },
+            {
+              "type": "NumberSpinner",
+              "name": "KitchenLight2Y",
+              "caption": "Manuell: Position im Bild: Y (0–650)",
+              "minimum": 0,
+              "maximum": 650
+            },
+            {
+              "type": "NumberSpinner",
+              "name": "KitchenLight2Scale",
+              "caption": "Manuell: Größe im Bild (%)",
+              "minimum": 30,
+              "maximum": 180
+            },
+            {
+              "type": "Label",
+              "caption": "Automatik passt Position, Größe und Lichtfläche an Raum und Leuchtenart an. Im Treppenhaus verläuft die LED-Leiste entlang des Aufgangs. Für eigene Positionen die Automatik deaktivieren."
+            }
+          ]
+        },
+        {
+          "type": "ExpansionPanel",
+          "caption": "Lichtkreis 3",
+          "items": [
+            {
+              "type": "CheckBox",
+              "name": "KitchenLight3Enabled",
+              "caption": "Lichtkreis aktiv"
+            },
+            {
+              "type": "ValidationTextBox",
+              "name": "KitchenLight3Name",
+              "caption": "Bezeichnung"
+            },
+            {
+              "type": "Select",
+              "name": "KitchenLight3Type",
+              "caption": "Leuchtenart",
+              "options": [
+                {
+                  "caption": "Hängelampe",
+                  "value": "pendant"
+                },
+                {
+                  "caption": "Stehlampe",
+                  "value": "floor"
+                },
+                {
+                  "caption": "Spots",
+                  "value": "spots"
+                },
+                {
+                  "caption": "LED-Leiste",
+                  "value": "led"
+                },
+                {
+                  "caption": "Panelleuchte",
+                  "value": "panel"
+                },
+                {
+                  "caption": "Wandleuchte",
+                  "value": "wall"
+                },
+                {
+                  "caption": "Wegelicht (Wandeinbau, bodennah)",
+                  "value": "path"
+                }
+              ]
+            },
+            {
+              "type": "CheckBox",
+              "name": "KitchenLight3UseSwitch",
+              "caption": "Ein/Aus anzeigen"
+            },
+            {
+              "type": "SelectVariable",
+              "name": "KitchenLight3Switch",
+              "caption": "Schaltbefehl (Boolean)",
+              "validVariableTypes": [
+                0
+              ]
+            },
+            {
+              "type": "SelectVariable",
+              "name": "KitchenLight3SwitchStatus",
+              "caption": "Schaltrückmeldung (optional)",
+              "validVariableTypes": [
+                0
+              ]
+            },
+            {
+              "type": "CheckBox",
+              "name": "KitchenLight3UseDim",
+              "caption": "Dimmregler anzeigen"
+            },
+            {
+              "type": "SelectVariable",
+              "name": "KitchenLight3Dim",
+              "caption": "Absoluter Dimmwert",
+              "validVariableTypes": [
+                1,
+                2
+              ]
+            },
+            {
+              "type": "SelectVariable",
+              "name": "KitchenLight3DimStatus",
+              "caption": "Dimmwertrückmeldung (optional)",
+              "validVariableTypes": [
+                1,
+                2
+              ]
+            },
+            {
+              "type": "Select",
+              "name": "KitchenLight3Maximum",
+              "caption": "Dimmwertebereich",
+              "options": [
+                {
+                  "caption": "0–100 %",
+                  "value": 100
+                },
+                {
+                  "caption": "0–255",
+                  "value": 255
+                },
+                {
+                  "caption": "0–1 (Float)",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "type": "CheckBox",
+              "name": "KitchenLight3AutoPosition",
+              "caption": "Leuchte automatisch passend zum Raum platzieren"
+            },
+            {
+              "type": "NumberSpinner",
+              "name": "KitchenLight3X",
+              "caption": "Manuell: Position im Bild: X (0–1000)",
+              "minimum": 0,
+              "maximum": 1000
+            },
+            {
+              "type": "NumberSpinner",
+              "name": "KitchenLight3Y",
+              "caption": "Manuell: Position im Bild: Y (0–650)",
+              "minimum": 0,
+              "maximum": 650
+            },
+            {
+              "type": "NumberSpinner",
+              "name": "KitchenLight3Scale",
+              "caption": "Manuell: Größe im Bild (%)",
+              "minimum": 30,
+              "maximum": 180
+            },
+            {
+              "type": "Label",
+              "caption": "Automatik passt Position, Größe und Lichtfläche an Raum und Leuchtenart an. Im Treppenhaus verläuft die LED-Leiste entlang des Aufgangs. Für eigene Positionen die Automatik deaktivieren."
+            }
+          ]
+        },
+        {
+          "type": "ExpansionPanel",
+          "caption": "Steckdosenkreis 1",
+          "items": [
+            {
+              "type": "CheckBox",
+              "name": "KitchenSocket1Enabled",
+              "caption": "Schaltkreis aktiv"
+            },
+            {
+              "type": "ValidationTextBox",
+              "name": "KitchenSocket1Name",
+              "caption": "Bezeichnung"
+            },
+            {
+              "type": "SelectVariable",
+              "name": "KitchenSocket1Control",
+              "caption": "Schaltbefehl (Boolean)",
+              "validVariableTypes": [
+                0
+              ]
+            },
+            {
+              "type": "SelectVariable",
+              "name": "KitchenSocket1Status",
+              "caption": "Schaltrückmeldung (optional)",
+              "validVariableTypes": [
+                0
+              ]
+            },
+            {
+              "type": "Label",
+              "caption": "Erscheint bei Aktivierung und zugeordneter Boolean-Schaltvariable."
+            }
+          ]
+        },
+        {
+          "type": "ExpansionPanel",
+          "caption": "Steckdosenkreis 2",
+          "items": [
+            {
+              "type": "CheckBox",
+              "name": "KitchenSocket2Enabled",
+              "caption": "Schaltkreis aktiv"
+            },
+            {
+              "type": "ValidationTextBox",
+              "name": "KitchenSocket2Name",
+              "caption": "Bezeichnung"
+            },
+            {
+              "type": "SelectVariable",
+              "name": "KitchenSocket2Control",
+              "caption": "Schaltbefehl (Boolean)",
+              "validVariableTypes": [
+                0
+              ]
+            },
+            {
+              "type": "SelectVariable",
+              "name": "KitchenSocket2Status",
+              "caption": "Schaltrückmeldung (optional)",
+              "validVariableTypes": [
+                0
+              ]
+            },
+            {
+              "type": "Label",
+              "caption": "Erscheint bei Aktivierung und zugeordneter Boolean-Schaltvariable."
+            }
+          ]
+        },
+        {
+          "type": "ExpansionPanel",
+          "caption": "Jalousie 1",
+          "items": [
+            {
+              "type": "CheckBox",
+              "name": "KitchenBlind1Enabled",
+              "caption": "Rollladen aktiv (Bedienung und Fenster im Bild)"
+            },
+            {
+              "type": "ValidationTextBox",
+              "name": "KitchenBlind1Name",
+              "caption": "Bezeichnung"
+            },
+            {
+              "type": "CheckBox",
+              "name": "KitchenBlind1UseMove",
+              "caption": "Hoch/Runter anzeigen"
+            },
+            {
+              "type": "Select",
+              "name": "KitchenBlind1CommandMode",
+              "caption": "Befehlsart",
+              "options": [
+                {
+                  "caption": "Getrennte KNX-Objekte: Auf/Ab und Stopp",
+                  "value": "separate"
+                },
+                {
+                  "caption": "Kombinierte Symcon-Befehlsvariable (Integer)",
+                  "value": "combined"
+                }
+              ]
+            },
+            {
+              "type": "SelectVariable",
+              "name": "KitchenBlind1Move",
+              "caption": "Fahrvariable / kombinierte Befehlsvariable",
+              "validVariableTypes": [
+                0,
+                1
+              ]
+            },
+            {
+              "type": "CheckBox",
+              "name": "KitchenBlind1DownValue",
+              "caption": "Abwärts sendet TRUE (aufwärts FALSE)"
+            },
+            {
+              "type": "CheckBox",
+              "name": "KitchenBlind1UseStop",
+              "caption": "Stopp anzeigen"
+            },
+            {
+              "type": "SelectVariable",
+              "name": "KitchenBlind1Stop",
+              "caption": "Stoppbefehl (Boolean)",
+              "validVariableTypes": [
+                0
+              ]
+            },
+            {
+              "type": "CheckBox",
+              "name": "KitchenBlind1StopValue",
+              "caption": "Stopp sendet TRUE"
+            },
+            {
+              "type": "CheckBox",
+              "name": "KitchenBlind1UsePosition",
+              "caption": "Positionsregler anzeigen"
+            },
+            {
+              "type": "SelectVariable",
+              "name": "KitchenBlind1Position",
+              "caption": "Absolute Position",
+              "validVariableTypes": [
+                1,
+                2
+              ]
+            },
+            {
+              "type": "SelectVariable",
+              "name": "KitchenBlind1Feedback",
+              "caption": "Positionsrückmeldung (optional)",
+              "validVariableTypes": [
+                1,
+                2
+              ]
+            },
+            {
+              "type": "Select",
+              "name": "KitchenBlind1Maximum",
+              "caption": "Positionswertebereich",
+              "options": [
+                {
+                  "caption": "0–100 %",
+                  "value": 100
+                },
+                {
+                  "caption": "0–255",
+                  "value": 255
+                },
+                {
+                  "caption": "0–1 (Float)",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "type": "CheckBox",
+              "name": "KitchenBlind1Invert",
+              "caption": "Variablenrichtung umkehren (Variable 0 = geschlossen)"
+            },
+            {
+              "type": "Label",
+              "caption": "Anzeige immer: 0 % offen, 100 % geschlossen. Für eine tatsächliche Positionsanzeige die Rückmeldung zuordnen. Die Fahr- und Stoppvariablen müssen bereits passende Aktionen in Symcon besitzen."
+            },
+            {
+              "type": "NumberSpinner",
+              "name": "KitchenBlind1UpCommand",
+              "caption": "Kombiniert: Wert für Auf"
+            },
+            {
+              "type": "NumberSpinner",
+              "name": "KitchenBlind1StopCommand",
+              "caption": "Kombiniert: Wert für Stopp"
+            },
+            {
+              "type": "NumberSpinner",
+              "name": "KitchenBlind1DownCommand",
+              "caption": "Kombiniert: Wert für Ab"
+            },
+            {
+              "type": "Label",
+              "caption": "Getrennte KNX-Objekte: Auf/Ab (Bool) und Stopp-/Schrittobjekt (Bool) getrennt zuordnen. Dieselbe Variable für Fahren und Stopp wird blockiert. Kombiniert: Fahrvariable als Integer auswählen und alle drei Werte passend zur vorhandenen Symcon-Aktion eintragen. Die Vorgabewerte 0/1/2 sind kein KNX-Standard."
+            }
+          ]
+        },
+        {
+          "type": "ExpansionPanel",
+          "caption": "Jalousie 2",
+          "items": [
+            {
+              "type": "CheckBox",
+              "name": "KitchenBlind2Enabled",
+              "caption": "Rollladen aktiv (Bedienung und Fenster im Bild)"
+            },
+            {
+              "type": "ValidationTextBox",
+              "name": "KitchenBlind2Name",
+              "caption": "Bezeichnung"
+            },
+            {
+              "type": "CheckBox",
+              "name": "KitchenBlind2UseMove",
+              "caption": "Hoch/Runter anzeigen"
+            },
+            {
+              "type": "Select",
+              "name": "KitchenBlind2CommandMode",
+              "caption": "Befehlsart",
+              "options": [
+                {
+                  "caption": "Getrennte KNX-Objekte: Auf/Ab und Stopp",
+                  "value": "separate"
+                },
+                {
+                  "caption": "Kombinierte Symcon-Befehlsvariable (Integer)",
+                  "value": "combined"
+                }
+              ]
+            },
+            {
+              "type": "SelectVariable",
+              "name": "KitchenBlind2Move",
+              "caption": "Fahrvariable / kombinierte Befehlsvariable",
+              "validVariableTypes": [
+                0,
+                1
+              ]
+            },
+            {
+              "type": "CheckBox",
+              "name": "KitchenBlind2DownValue",
+              "caption": "Abwärts sendet TRUE (aufwärts FALSE)"
+            },
+            {
+              "type": "CheckBox",
+              "name": "KitchenBlind2UseStop",
+              "caption": "Stopp anzeigen"
+            },
+            {
+              "type": "SelectVariable",
+              "name": "KitchenBlind2Stop",
+              "caption": "Stoppbefehl (Boolean)",
+              "validVariableTypes": [
+                0
+              ]
+            },
+            {
+              "type": "CheckBox",
+              "name": "KitchenBlind2StopValue",
+              "caption": "Stopp sendet TRUE"
+            },
+            {
+              "type": "CheckBox",
+              "name": "KitchenBlind2UsePosition",
+              "caption": "Positionsregler anzeigen"
+            },
+            {
+              "type": "SelectVariable",
+              "name": "KitchenBlind2Position",
+              "caption": "Absolute Position",
+              "validVariableTypes": [
+                1,
+                2
+              ]
+            },
+            {
+              "type": "SelectVariable",
+              "name": "KitchenBlind2Feedback",
+              "caption": "Positionsrückmeldung (optional)",
+              "validVariableTypes": [
+                1,
+                2
+              ]
+            },
+            {
+              "type": "Select",
+              "name": "KitchenBlind2Maximum",
+              "caption": "Positionswertebereich",
+              "options": [
+                {
+                  "caption": "0–100 %",
+                  "value": 100
+                },
+                {
+                  "caption": "0–255",
+                  "value": 255
+                },
+                {
+                  "caption": "0–1 (Float)",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "type": "CheckBox",
+              "name": "KitchenBlind2Invert",
+              "caption": "Variablenrichtung umkehren (Variable 0 = geschlossen)"
+            },
+            {
+              "type": "Label",
+              "caption": "Anzeige immer: 0 % offen, 100 % geschlossen. Für eine tatsächliche Positionsanzeige die Rückmeldung zuordnen. Die Fahr- und Stoppvariablen müssen bereits passende Aktionen in Symcon besitzen."
+            },
+            {
+              "type": "NumberSpinner",
+              "name": "KitchenBlind2UpCommand",
+              "caption": "Kombiniert: Wert für Auf"
+            },
+            {
+              "type": "NumberSpinner",
+              "name": "KitchenBlind2StopCommand",
+              "caption": "Kombiniert: Wert für Stopp"
+            },
+            {
+              "type": "NumberSpinner",
+              "name": "KitchenBlind2DownCommand",
+              "caption": "Kombiniert: Wert für Ab"
+            },
+            {
+              "type": "Label",
+              "caption": "Getrennte KNX-Objekte: Auf/Ab (Bool) und Stopp-/Schrittobjekt (Bool) getrennt zuordnen. Dieselbe Variable für Fahren und Stopp wird blockiert. Kombiniert: Fahrvariable als Integer auswählen und alle drei Werte passend zur vorhandenen Symcon-Aktion eintragen. Die Vorgabewerte 0/1/2 sind kein KNX-Standard."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ExpansionPanel",
+      "caption": "Esszimmer",
+      "items": [
+        {
+          "type": "CheckBox",
+          "name": "DiningEnabled",
+          "caption": "Esszimmer anzeigen"
+        },
+        {
+          "type": "ValidationTextBox",
+          "name": "DiningName",
+          "caption": "Bereichsbezeichnung"
+        },
+        {
+          "type": "ExpansionPanel",
+          "caption": "Lichtkreis 1",
+          "items": [
+            {
+              "type": "CheckBox",
+              "name": "DiningLight1Enabled",
+              "caption": "Lichtkreis aktiv"
+            },
+            {
+              "type": "ValidationTextBox",
+              "name": "DiningLight1Name",
+              "caption": "Bezeichnung"
+            },
+            {
+              "type": "Select",
+              "name": "DiningLight1Type",
+              "caption": "Leuchtenart",
+              "options": [
+                {
+                  "caption": "Hängelampe",
+                  "value": "pendant"
+                },
+                {
+                  "caption": "Stehlampe",
+                  "value": "floor"
+                },
+                {
+                  "caption": "Spots",
+                  "value": "spots"
+                },
+                {
+                  "caption": "LED-Leiste",
+                  "value": "led"
+                },
+                {
+                  "caption": "Panelleuchte",
+                  "value": "panel"
+                },
+                {
+                  "caption": "Wandleuchte",
+                  "value": "wall"
+                },
+                {
+                  "caption": "Wegelicht (Wandeinbau, bodennah)",
+                  "value": "path"
+                }
+              ]
+            },
+            {
+              "type": "CheckBox",
+              "name": "DiningLight1UseSwitch",
+              "caption": "Ein/Aus anzeigen"
+            },
+            {
+              "type": "SelectVariable",
+              "name": "DiningLight1Switch",
+              "caption": "Schaltbefehl (Boolean)",
+              "validVariableTypes": [
+                0
+              ]
+            },
+            {
+              "type": "SelectVariable",
+              "name": "DiningLight1SwitchStatus",
+              "caption": "Schaltrückmeldung (optional)",
+              "validVariableTypes": [
+                0
+              ]
+            },
+            {
+              "type": "CheckBox",
+              "name": "DiningLight1UseDim",
+              "caption": "Dimmregler anzeigen"
+            },
+            {
+              "type": "SelectVariable",
+              "name": "DiningLight1Dim",
+              "caption": "Absoluter Dimmwert",
+              "validVariableTypes": [
+                1,
+                2
+              ]
+            },
+            {
+              "type": "SelectVariable",
+              "name": "DiningLight1DimStatus",
+              "caption": "Dimmwertrückmeldung (optional)",
+              "validVariableTypes": [
+                1,
+                2
+              ]
+            },
+            {
+              "type": "Select",
+              "name": "DiningLight1Maximum",
+              "caption": "Dimmwertebereich",
+              "options": [
+                {
+                  "caption": "0–100 %",
+                  "value": 100
+                },
+                {
+                  "caption": "0–255",
+                  "value": 255
+                },
+                {
+                  "caption": "0–1 (Float)",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "type": "CheckBox",
+              "name": "DiningLight1AutoPosition",
+              "caption": "Leuchte automatisch passend zum Raum platzieren"
+            },
+            {
+              "type": "NumberSpinner",
+              "name": "DiningLight1X",
+              "caption": "Manuell: Position im Bild: X (0–1000)",
+              "minimum": 0,
+              "maximum": 1000
+            },
+            {
+              "type": "NumberSpinner",
+              "name": "DiningLight1Y",
+              "caption": "Manuell: Position im Bild: Y (0–650)",
+              "minimum": 0,
+              "maximum": 650
+            },
+            {
+              "type": "NumberSpinner",
+              "name": "DiningLight1Scale",
+              "caption": "Manuell: Größe im Bild (%)",
+              "minimum": 30,
+              "maximum": 180
+            },
+            {
+              "type": "Label",
+              "caption": "Automatik passt Position, Größe und Lichtfläche an Raum und Leuchtenart an. Im Treppenhaus verläuft die LED-Leiste entlang des Aufgangs. Für eigene Positionen die Automatik deaktivieren."
+            }
+          ]
+        },
+        {
+          "type": "ExpansionPanel",
+          "caption": "Lichtkreis 2",
+          "items": [
+            {
+              "type": "CheckBox",
+              "name": "DiningLight2Enabled",
+              "caption": "Lichtkreis aktiv"
+            },
+            {
+              "type": "ValidationTextBox",
+              "name": "DiningLight2Name",
+              "caption": "Bezeichnung"
+            },
+            {
+              "type": "Select",
+              "name": "DiningLight2Type",
+              "caption": "Leuchtenart",
+              "options": [
+                {
+                  "caption": "Hängelampe",
+                  "value": "pendant"
+                },
+                {
+                  "caption": "Stehlampe",
+                  "value": "floor"
+                },
+                {
+                  "caption": "Spots",
+                  "value": "spots"
+                },
+                {
+                  "caption": "LED-Leiste",
+                  "value": "led"
+                },
+                {
+                  "caption": "Panelleuchte",
+                  "value": "panel"
+                },
+                {
+                  "caption": "Wandleuchte",
+                  "value": "wall"
+                },
+                {
+                  "caption": "Wegelicht (Wandeinbau, bodennah)",
+                  "value": "path"
+                }
+              ]
+            },
+            {
+              "type": "CheckBox",
+              "name": "DiningLight2UseSwitch",
+              "caption": "Ein/Aus anzeigen"
+            },
+            {
+              "type": "SelectVariable",
+              "name": "DiningLight2Switch",
+              "caption": "Schaltbefehl (Boolean)",
+              "validVariableTypes": [
+                0
+              ]
+            },
+            {
+              "type": "SelectVariable",
+              "name": "DiningLight2SwitchStatus",
+              "caption": "Schaltrückmeldung (optional)",
+              "validVariableTypes": [
+                0
+              ]
+            },
+            {
+              "type": "CheckBox",
+              "name": "DiningLight2UseDim",
+              "caption": "Dimmregler anzeigen"
+            },
+            {
+              "type": "SelectVariable",
+              "name": "DiningLight2Dim",
+              "caption": "Absoluter Dimmwert",
+              "validVariableTypes": [
+                1,
+                2
+              ]
+            },
+            {
+              "type": "SelectVariable",
+              "name": "DiningLight2DimStatus",
+              "caption": "Dimmwertrückmeldung (optional)",
+              "validVariableTypes": [
+                1,
+                2
+              ]
+            },
+            {
+              "type": "Select",
+              "name": "DiningLight2Maximum",
+              "caption": "Dimmwertebereich",
+              "options": [
+                {
+                  "caption": "0–100 %",
+                  "value": 100
+                },
+                {
+                  "caption": "0–255",
+                  "value": 255
+                },
+                {
+                  "caption": "0–1 (Float)",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "type": "CheckBox",
+              "name": "DiningLight2AutoPosition",
+              "caption": "Leuchte automatisch passend zum Raum platzieren"
+            },
+            {
+              "type": "NumberSpinner",
+              "name": "DiningLight2X",
+              "caption": "Manuell: Position im Bild: X (0–1000)",
+              "minimum": 0,
+              "maximum": 1000
+            },
+            {
+              "type": "NumberSpinner",
+              "name": "DiningLight2Y",
+              "caption": "Manuell: Position im Bild: Y (0–650)",
+              "minimum": 0,
+              "maximum": 650
+            },
+            {
+              "type": "NumberSpinner",
+              "name": "DiningLight2Scale",
+              "caption": "Manuell: Größe im Bild (%)",
+              "minimum": 30,
+              "maximum": 180
+            },
+            {
+              "type": "Label",
+              "caption": "Automatik passt Position, Größe und Lichtfläche an Raum und Leuchtenart an. Im Treppenhaus verläuft die LED-Leiste entlang des Aufgangs. Für eigene Positionen die Automatik deaktivieren."
+            }
+          ]
+        },
+        {
+          "type": "ExpansionPanel",
+          "caption": "Lichtkreis 3",
+          "items": [
+            {
+              "type": "CheckBox",
+              "name": "DiningLight3Enabled",
+              "caption": "Lichtkreis aktiv"
+            },
+            {
+              "type": "ValidationTextBox",
+              "name": "DiningLight3Name",
+              "caption": "Bezeichnung"
+            },
+            {
+              "type": "Select",
+              "name": "DiningLight3Type",
+              "caption": "Leuchtenart",
+              "options": [
+                {
+                  "caption": "Hängelampe",
+                  "value": "pendant"
+                },
+                {
+                  "caption": "Stehlampe",
+                  "value": "floor"
+                },
+                {
+                  "caption": "Spots",
+                  "value": "spots"
+                },
+                {
+                  "caption": "LED-Leiste",
+                  "value": "led"
+                },
+                {
+                  "caption": "Panelleuchte",
+                  "value": "panel"
+                },
+                {
+                  "caption": "Wandleuchte",
+                  "value": "wall"
+                },
+                {
+                  "caption": "Wegelicht (Wandeinbau, bodennah)",
+                  "value": "path"
+                }
+              ]
+            },
+            {
+              "type": "CheckBox",
+              "name": "DiningLight3UseSwitch",
+              "caption": "Ein/Aus anzeigen"
+            },
+            {
+              "type": "SelectVariable",
+              "name": "DiningLight3Switch",
+              "caption": "Schaltbefehl (Boolean)",
+              "validVariableTypes": [
+                0
+              ]
+            },
+            {
+              "type": "SelectVariable",
+              "name": "DiningLight3SwitchStatus",
+              "caption": "Schaltrückmeldung (optional)",
+              "validVariableTypes": [
+                0
+              ]
+            },
+            {
+              "type": "CheckBox",
+              "name": "DiningLight3UseDim",
+              "caption": "Dimmregler anzeigen"
+            },
+            {
+              "type": "SelectVariable",
+              "name": "DiningLight3Dim",
+              "caption": "Absoluter Dimmwert",
+              "validVariableTypes": [
+                1,
+                2
+              ]
+            },
+            {
+              "type": "SelectVariable",
+              "name": "DiningLight3DimStatus",
+              "caption": "Dimmwertrückmeldung (optional)",
+              "validVariableTypes": [
+                1,
+                2
+              ]
+            },
+            {
+              "type": "Select",
+              "name": "DiningLight3Maximum",
+              "caption": "Dimmwertebereich",
+              "options": [
+                {
+                  "caption": "0–100 %",
+                  "value": 100
+                },
+                {
+                  "caption": "0–255",
+                  "value": 255
+                },
+                {
+                  "caption": "0–1 (Float)",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "type": "CheckBox",
+              "name": "DiningLight3AutoPosition",
+              "caption": "Leuchte automatisch passend zum Raum platzieren"
+            },
+            {
+              "type": "NumberSpinner",
+              "name": "DiningLight3X",
+              "caption": "Manuell: Position im Bild: X (0–1000)",
+              "minimum": 0,
+              "maximum": 1000
+            },
+            {
+              "type": "NumberSpinner",
+              "name": "DiningLight3Y",
+              "caption": "Manuell: Position im Bild: Y (0–650)",
+              "minimum": 0,
+              "maximum": 650
+            },
+            {
+              "type": "NumberSpinner",
+              "name": "DiningLight3Scale",
+              "caption": "Manuell: Größe im Bild (%)",
+              "minimum": 30,
+              "maximum": 180
+            },
+            {
+              "type": "Label",
+              "caption": "Automatik passt Position, Größe und Lichtfläche an Raum und Leuchtenart an. Im Treppenhaus verläuft die LED-Leiste entlang des Aufgangs. Für eigene Positionen die Automatik deaktivieren."
+            }
+          ]
+        },
+        {
+          "type": "ExpansionPanel",
+          "caption": "Steckdosenkreis 1",
+          "items": [
+            {
+              "type": "CheckBox",
+              "name": "DiningSocket1Enabled",
+              "caption": "Schaltkreis aktiv"
+            },
+            {
+              "type": "ValidationTextBox",
+              "name": "DiningSocket1Name",
+              "caption": "Bezeichnung"
+            },
+            {
+              "type": "SelectVariable",
+              "name": "DiningSocket1Control",
+              "caption": "Schaltbefehl (Boolean)",
+              "validVariableTypes": [
+                0
+              ]
+            },
+            {
+              "type": "SelectVariable",
+              "name": "DiningSocket1Status",
+              "caption": "Schaltrückmeldung (optional)",
+              "validVariableTypes": [
+                0
+              ]
+            },
+            {
+              "type": "Label",
+              "caption": "Erscheint bei Aktivierung und zugeordneter Boolean-Schaltvariable."
+            }
+          ]
+        },
+        {
+          "type": "ExpansionPanel",
+          "caption": "Steckdosenkreis 2",
+          "items": [
+            {
+              "type": "CheckBox",
+              "name": "DiningSocket2Enabled",
+              "caption": "Schaltkreis aktiv"
+            },
+            {
+              "type": "ValidationTextBox",
+              "name": "DiningSocket2Name",
+              "caption": "Bezeichnung"
+            },
+            {
+              "type": "SelectVariable",
+              "name": "DiningSocket2Control",
+              "caption": "Schaltbefehl (Boolean)",
+              "validVariableTypes": [
+                0
+              ]
+            },
+            {
+              "type": "SelectVariable",
+              "name": "DiningSocket2Status",
+              "caption": "Schaltrückmeldung (optional)",
+              "validVariableTypes": [
+                0
+              ]
+            },
+            {
+              "type": "Label",
+              "caption": "Erscheint bei Aktivierung und zugeordneter Boolean-Schaltvariable."
+            }
+          ]
+        },
+        {
+          "type": "ExpansionPanel",
+          "caption": "Jalousie 1",
+          "items": [
+            {
+              "type": "CheckBox",
+              "name": "DiningBlind1Enabled",
+              "caption": "Rollladen aktiv (Bedienung und Fenster im Bild)"
+            },
+            {
+              "type": "ValidationTextBox",
+              "name": "DiningBlind1Name",
+              "caption": "Bezeichnung"
+            },
+            {
+              "type": "CheckBox",
+              "name": "DiningBlind1UseMove",
+              "caption": "Hoch/Runter anzeigen"
+            },
+            {
+              "type": "Select",
+              "name": "DiningBlind1CommandMode",
+              "caption": "Befehlsart",
+              "options": [
+                {
+                  "caption": "Getrennte KNX-Objekte: Auf/Ab und Stopp",
+                  "value": "separate"
+                },
+                {
+                  "caption": "Kombinierte Symcon-Befehlsvariable (Integer)",
+                  "value": "combined"
+                }
+              ]
+            },
+            {
+              "type": "SelectVariable",
+              "name": "DiningBlind1Move",
+              "caption": "Fahrvariable / kombinierte Befehlsvariable",
+              "validVariableTypes": [
+                0,
+                1
+              ]
+            },
+            {
+              "type": "CheckBox",
+              "name": "DiningBlind1DownValue",
+              "caption": "Abwärts sendet TRUE (aufwärts FALSE)"
+            },
+            {
+              "type": "CheckBox",
+              "name": "DiningBlind1UseStop",
+              "caption": "Stopp anzeigen"
+            },
+            {
+              "type": "SelectVariable",
+              "name": "DiningBlind1Stop",
+              "caption": "Stoppbefehl (Boolean)",
+              "validVariableTypes": [
+                0
+              ]
+            },
+            {
+              "type": "CheckBox",
+              "name": "DiningBlind1StopValue",
+              "caption": "Stopp sendet TRUE"
+            },
+            {
+              "type": "CheckBox",
+              "name": "DiningBlind1UsePosition",
+              "caption": "Positionsregler anzeigen"
+            },
+            {
+              "type": "SelectVariable",
+              "name": "DiningBlind1Position",
+              "caption": "Absolute Position",
+              "validVariableTypes": [
+                1,
+                2
+              ]
+            },
+            {
+              "type": "SelectVariable",
+              "name": "DiningBlind1Feedback",
+              "caption": "Positionsrückmeldung (optional)",
+              "validVariableTypes": [
+                1,
+                2
+              ]
+            },
+            {
+              "type": "Select",
+              "name": "DiningBlind1Maximum",
+              "caption": "Positionswertebereich",
+              "options": [
+                {
+                  "caption": "0–100 %",
+                  "value": 100
+                },
+                {
+                  "caption": "0–255",
+                  "value": 255
+                },
+                {
+                  "caption": "0–1 (Float)",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "type": "CheckBox",
+              "name": "DiningBlind1Invert",
+              "caption": "Variablenrichtung umkehren (Variable 0 = geschlossen)"
+            },
+            {
+              "type": "Label",
+              "caption": "Anzeige immer: 0 % offen, 100 % geschlossen. Für eine tatsächliche Positionsanzeige die Rückmeldung zuordnen. Die Fahr- und Stoppvariablen müssen bereits passende Aktionen in Symcon besitzen."
+            },
+            {
+              "type": "NumberSpinner",
+              "name": "DiningBlind1UpCommand",
+              "caption": "Kombiniert: Wert für Auf"
+            },
+            {
+              "type": "NumberSpinner",
+              "name": "DiningBlind1StopCommand",
+              "caption": "Kombiniert: Wert für Stopp"
+            },
+            {
+              "type": "NumberSpinner",
+              "name": "DiningBlind1DownCommand",
+              "caption": "Kombiniert: Wert für Ab"
+            },
+            {
+              "type": "Label",
+              "caption": "Getrennte KNX-Objekte: Auf/Ab (Bool) und Stopp-/Schrittobjekt (Bool) getrennt zuordnen. Dieselbe Variable für Fahren und Stopp wird blockiert. Kombiniert: Fahrvariable als Integer auswählen und alle drei Werte passend zur vorhandenen Symcon-Aktion eintragen. Die Vorgabewerte 0/1/2 sind kein KNX-Standard."
+            }
+          ]
+        },
+        {
+          "type": "ExpansionPanel",
+          "caption": "Jalousie 2",
+          "items": [
+            {
+              "type": "CheckBox",
+              "name": "DiningBlind2Enabled",
+              "caption": "Rollladen aktiv (Bedienung und Fenster im Bild)"
+            },
+            {
+              "type": "ValidationTextBox",
+              "name": "DiningBlind2Name",
+              "caption": "Bezeichnung"
+            },
+            {
+              "type": "CheckBox",
+              "name": "DiningBlind2UseMove",
+              "caption": "Hoch/Runter anzeigen"
+            },
+            {
+              "type": "Select",
+              "name": "DiningBlind2CommandMode",
+              "caption": "Befehlsart",
+              "options": [
+                {
+                  "caption": "Getrennte KNX-Objekte: Auf/Ab und Stopp",
+                  "value": "separate"
+                },
+                {
+                  "caption": "Kombinierte Symcon-Befehlsvariable (Integer)",
+                  "value": "combined"
+                }
+              ]
+            },
+            {
+              "type": "SelectVariable",
+              "name": "DiningBlind2Move",
+              "caption": "Fahrvariable / kombinierte Befehlsvariable",
+              "validVariableTypes": [
+                0,
+                1
+              ]
+            },
+            {
+              "type": "CheckBox",
+              "name": "DiningBlind2DownValue",
+              "caption": "Abwärts sendet TRUE (aufwärts FALSE)"
+            },
+            {
+              "type": "CheckBox",
+              "name": "DiningBlind2UseStop",
+              "caption": "Stopp anzeigen"
+            },
+            {
+              "type": "SelectVariable",
+              "name": "DiningBlind2Stop",
+              "caption": "Stoppbefehl (Boolean)",
+              "validVariableTypes": [
+                0
+              ]
+            },
+            {
+              "type": "CheckBox",
+              "name": "DiningBlind2StopValue",
+              "caption": "Stopp sendet TRUE"
+            },
+            {
+              "type": "CheckBox",
+              "name": "DiningBlind2UsePosition",
+              "caption": "Positionsregler anzeigen"
+            },
+            {
+              "type": "SelectVariable",
+              "name": "DiningBlind2Position",
+              "caption": "Absolute Position",
+              "validVariableTypes": [
+                1,
+                2
+              ]
+            },
+            {
+              "type": "SelectVariable",
+              "name": "DiningBlind2Feedback",
+              "caption": "Positionsrückmeldung (optional)",
+              "validVariableTypes": [
+                1,
+                2
+              ]
+            },
+            {
+              "type": "Select",
+              "name": "DiningBlind2Maximum",
+              "caption": "Positionswertebereich",
+              "options": [
+                {
+                  "caption": "0–100 %",
+                  "value": 100
+                },
+                {
+                  "caption": "0–255",
+                  "value": 255
+                },
+                {
+                  "caption": "0–1 (Float)",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "type": "CheckBox",
+              "name": "DiningBlind2Invert",
+              "caption": "Variablenrichtung umkehren (Variable 0 = geschlossen)"
+            },
+            {
+              "type": "Label",
+              "caption": "Anzeige immer: 0 % offen, 100 % geschlossen. Für eine tatsächliche Positionsanzeige die Rückmeldung zuordnen. Die Fahr- und Stoppvariablen müssen bereits passende Aktionen in Symcon besitzen."
+            },
+            {
+              "type": "NumberSpinner",
+              "name": "DiningBlind2UpCommand",
+              "caption": "Kombiniert: Wert für Auf"
+            },
+            {
+              "type": "NumberSpinner",
+              "name": "DiningBlind2StopCommand",
+              "caption": "Kombiniert: Wert für Stopp"
+            },
+            {
+              "type": "NumberSpinner",
+              "name": "DiningBlind2DownCommand",
+              "caption": "Kombiniert: Wert für Ab"
+            },
+            {
+              "type": "Label",
+              "caption": "Getrennte KNX-Objekte: Auf/Ab (Bool) und Stopp-/Schrittobjekt (Bool) getrennt zuordnen. Dieselbe Variable für Fahren und Stopp wird blockiert. Kombiniert: Fahrvariable als Integer auswählen und alle drei Werte passend zur vorhandenen Symcon-Aktion eintragen. Die Vorgabewerte 0/1/2 sind kein KNX-Standard."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ExpansionPanel",
+      "caption": "Wohnzimmer",
+      "items": [
+        {
+          "type": "CheckBox",
+          "name": "LivingEnabled",
+          "caption": "Wohnzimmer anzeigen"
+        },
+        {
+          "type": "ValidationTextBox",
+          "name": "LivingName",
+          "caption": "Bereichsbezeichnung"
+        },
+        {
+          "type": "ExpansionPanel",
+          "caption": "Lichtkreis 1",
+          "items": [
+            {
+              "type": "CheckBox",
+              "name": "LivingLight1Enabled",
+              "caption": "Lichtkreis aktiv"
+            },
+            {
+              "type": "ValidationTextBox",
+              "name": "LivingLight1Name",
+              "caption": "Bezeichnung"
+            },
+            {
+              "type": "Select",
+              "name": "LivingLight1Type",
+              "caption": "Leuchtenart",
+              "options": [
+                {
+                  "caption": "Hängelampe",
+                  "value": "pendant"
+                },
+                {
+                  "caption": "Stehlampe",
+                  "value": "floor"
+                },
+                {
+                  "caption": "Spots",
+                  "value": "spots"
+                },
+                {
+                  "caption": "LED-Leiste",
+                  "value": "led"
+                },
+                {
+                  "caption": "Panelleuchte",
+                  "value": "panel"
+                },
+                {
+                  "caption": "Wandleuchte",
+                  "value": "wall"
+                },
+                {
+                  "caption": "Wegelicht (Wandeinbau, bodennah)",
+                  "value": "path"
+                }
+              ]
+            },
+            {
+              "type": "CheckBox",
+              "name": "LivingLight1UseSwitch",
+              "caption": "Ein/Aus anzeigen"
+            },
+            {
+              "type": "SelectVariable",
+              "name": "LivingLight1Switch",
+              "caption": "Schaltbefehl (Boolean)",
+              "validVariableTypes": [
+                0
+              ]
+            },
+            {
+              "type": "SelectVariable",
+              "name": "LivingLight1SwitchStatus",
+              "caption": "Schaltrückmeldung (optional)",
+              "validVariableTypes": [
+                0
+              ]
+            },
+            {
+              "type": "CheckBox",
+              "name": "LivingLight1UseDim",
+              "caption": "Dimmregler anzeigen"
+            },
+            {
+              "type": "SelectVariable",
+              "name": "LivingLight1Dim",
+              "caption": "Absoluter Dimmwert",
+              "validVariableTypes": [
+                1,
+                2
+              ]
+            },
+            {
+              "type": "SelectVariable",
+              "name": "LivingLight1DimStatus",
+              "caption": "Dimmwertrückmeldung (optional)",
+              "validVariableTypes": [
+                1,
+                2
+              ]
+            },
+            {
+              "type": "Select",
+              "name": "LivingLight1Maximum",
+              "caption": "Dimmwertebereich",
+              "options": [
+                {
+                  "caption": "0–100 %",
+                  "value": 100
+                },
+                {
+                  "caption": "0–255",
+                  "value": 255
+                },
+                {
+                  "caption": "0–1 (Float)",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "type": "CheckBox",
+              "name": "LivingLight1AutoPosition",
+              "caption": "Leuchte automatisch passend zum Raum platzieren"
+            },
+            {
+              "type": "NumberSpinner",
+              "name": "LivingLight1X",
+              "caption": "Manuell: Position im Bild: X (0–1000)",
+              "minimum": 0,
+              "maximum": 1000
+            },
+            {
+              "type": "NumberSpinner",
+              "name": "LivingLight1Y",
+              "caption": "Manuell: Position im Bild: Y (0–650)",
+              "minimum": 0,
+              "maximum": 650
+            },
+            {
+              "type": "NumberSpinner",
+              "name": "LivingLight1Scale",
+              "caption": "Manuell: Größe im Bild (%)",
+              "minimum": 30,
+              "maximum": 180
+            },
+            {
+              "type": "Label",
+              "caption": "Automatik passt Position, Größe und Lichtfläche an Raum und Leuchtenart an. Im Treppenhaus verläuft die LED-Leiste entlang des Aufgangs. Für eigene Positionen die Automatik deaktivieren."
+            }
+          ]
+        },
+        {
+          "type": "ExpansionPanel",
+          "caption": "Lichtkreis 2",
+          "items": [
+            {
+              "type": "CheckBox",
+              "name": "LivingLight2Enabled",
+              "caption": "Lichtkreis aktiv"
+            },
+            {
+              "type": "ValidationTextBox",
+              "name": "LivingLight2Name",
+              "caption": "Bezeichnung"
+            },
+            {
+              "type": "Select",
+              "name": "LivingLight2Type",
+              "caption": "Leuchtenart",
+              "options": [
+                {
+                  "caption": "Hängelampe",
+                  "value": "pendant"
+                },
+                {
+                  "caption": "Stehlampe",
+                  "value": "floor"
+                },
+                {
+                  "caption": "Spots",
+                  "value": "spots"
+                },
+                {
+                  "caption": "LED-Leiste",
+                  "value": "led"
+                },
+                {
+                  "caption": "Panelleuchte",
+                  "value": "panel"
+                },
+                {
+                  "caption": "Wandleuchte",
+                  "value": "wall"
+                },
+                {
+                  "caption": "Wegelicht (Wandeinbau, bodennah)",
+                  "value": "path"
+                }
+              ]
+            },
+            {
+              "type": "CheckBox",
+              "name": "LivingLight2UseSwitch",
+              "caption": "Ein/Aus anzeigen"
+            },
+            {
+              "type": "SelectVariable",
+              "name": "LivingLight2Switch",
+              "caption": "Schaltbefehl (Boolean)",
+              "validVariableTypes": [
+                0
+              ]
+            },
+            {
+              "type": "SelectVariable",
+              "name": "LivingLight2SwitchStatus",
+              "caption": "Schaltrückmeldung (optional)",
+              "validVariableTypes": [
+                0
+              ]
+            },
+            {
+              "type": "CheckBox",
+              "name": "LivingLight2UseDim",
+              "caption": "Dimmregler anzeigen"
+            },
+            {
+              "type": "SelectVariable",
+              "name": "LivingLight2Dim",
+              "caption": "Absoluter Dimmwert",
+              "validVariableTypes": [
+                1,
+                2
+              ]
+            },
+            {
+              "type": "SelectVariable",
+              "name": "LivingLight2DimStatus",
+              "caption": "Dimmwertrückmeldung (optional)",
+              "validVariableTypes": [
+                1,
+                2
+              ]
+            },
+            {
+              "type": "Select",
+              "name": "LivingLight2Maximum",
+              "caption": "Dimmwertebereich",
+              "options": [
+                {
+                  "caption": "0–100 %",
+                  "value": 100
+                },
+                {
+                  "caption": "0–255",
+                  "value": 255
+                },
+                {
+                  "caption": "0–1 (Float)",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "type": "CheckBox",
+              "name": "LivingLight2AutoPosition",
+              "caption": "Leuchte automatisch passend zum Raum platzieren"
+            },
+            {
+              "type": "NumberSpinner",
+              "name": "LivingLight2X",
+              "caption": "Manuell: Position im Bild: X (0–1000)",
+              "minimum": 0,
+              "maximum": 1000
+            },
+            {
+              "type": "NumberSpinner",
+              "name": "LivingLight2Y",
+              "caption": "Manuell: Position im Bild: Y (0–650)",
+              "minimum": 0,
+              "maximum": 650
+            },
+            {
+              "type": "NumberSpinner",
+              "name": "LivingLight2Scale",
+              "caption": "Manuell: Größe im Bild (%)",
+              "minimum": 30,
+              "maximum": 180
+            },
+            {
+              "type": "Label",
+              "caption": "Automatik passt Position, Größe und Lichtfläche an Raum und Leuchtenart an. Im Treppenhaus verläuft die LED-Leiste entlang des Aufgangs. Für eigene Positionen die Automatik deaktivieren."
+            }
+          ]
+        },
+        {
+          "type": "ExpansionPanel",
+          "caption": "Lichtkreis 3",
+          "items": [
+            {
+              "type": "CheckBox",
+              "name": "LivingLight3Enabled",
+              "caption": "Lichtkreis aktiv"
+            },
+            {
+              "type": "ValidationTextBox",
+              "name": "LivingLight3Name",
+              "caption": "Bezeichnung"
+            },
+            {
+              "type": "Select",
+              "name": "LivingLight3Type",
+              "caption": "Leuchtenart",
+              "options": [
+                {
+                  "caption": "Hängelampe",
+                  "value": "pendant"
+                },
+                {
+                  "caption": "Stehlampe",
+                  "value": "floor"
+                },
+                {
+                  "caption": "Spots",
+                  "value": "spots"
+                },
+                {
+                  "caption": "LED-Leiste",
+                  "value": "led"
+                },
+                {
+                  "caption": "Panelleuchte",
+                  "value": "panel"
+                },
+                {
+                  "caption": "Wandleuchte",
+                  "value": "wall"
+                },
+                {
+                  "caption": "Wegelicht (Wandeinbau, bodennah)",
+                  "value": "path"
+                }
+              ]
+            },
+            {
+              "type": "CheckBox",
+              "name": "LivingLight3UseSwitch",
+              "caption": "Ein/Aus anzeigen"
+            },
+            {
+              "type": "SelectVariable",
+              "name": "LivingLight3Switch",
+              "caption": "Schaltbefehl (Boolean)",
+              "validVariableTypes": [
+                0
+              ]
+            },
+            {
+              "type": "SelectVariable",
+              "name": "LivingLight3SwitchStatus",
+              "caption": "Schaltrückmeldung (optional)",
+              "validVariableTypes": [
+                0
+              ]
+            },
+            {
+              "type": "CheckBox",
+              "name": "LivingLight3UseDim",
+              "caption": "Dimmregler anzeigen"
+            },
+            {
+              "type": "SelectVariable",
+              "name": "LivingLight3Dim",
+              "caption": "Absoluter Dimmwert",
+              "validVariableTypes": [
+                1,
+                2
+              ]
+            },
+            {
+              "type": "SelectVariable",
+              "name": "LivingLight3DimStatus",
+              "caption": "Dimmwertrückmeldung (optional)",
+              "validVariableTypes": [
+                1,
+                2
+              ]
+            },
+            {
+              "type": "Select",
+              "name": "LivingLight3Maximum",
+              "caption": "Dimmwertebereich",
+              "options": [
+                {
+                  "caption": "0–100 %",
+                  "value": 100
+                },
+                {
+                  "caption": "0–255",
+                  "value": 255
+                },
+                {
+                  "caption": "0–1 (Float)",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "type": "CheckBox",
+              "name": "LivingLight3AutoPosition",
+              "caption": "Leuchte automatisch passend zum Raum platzieren"
+            },
+            {
+              "type": "NumberSpinner",
+              "name": "LivingLight3X",
+              "caption": "Manuell: Position im Bild: X (0–1000)",
+              "minimum": 0,
+              "maximum": 1000
+            },
+            {
+              "type": "NumberSpinner",
+              "name": "LivingLight3Y",
+              "caption": "Manuell: Position im Bild: Y (0–650)",
+              "minimum": 0,
+              "maximum": 650
+            },
+            {
+              "type": "NumberSpinner",
+              "name": "LivingLight3Scale",
+              "caption": "Manuell: Größe im Bild (%)",
+              "minimum": 30,
+              "maximum": 180
+            },
+            {
+              "type": "Label",
+              "caption": "Automatik passt Position, Größe und Lichtfläche an Raum und Leuchtenart an. Im Treppenhaus verläuft die LED-Leiste entlang des Aufgangs. Für eigene Positionen die Automatik deaktivieren."
+            }
+          ]
+        },
+        {
+          "type": "ExpansionPanel",
+          "caption": "Steckdosenkreis 1",
+          "items": [
+            {
+              "type": "CheckBox",
+              "name": "LivingSocket1Enabled",
+              "caption": "Schaltkreis aktiv"
+            },
+            {
+              "type": "ValidationTextBox",
+              "name": "LivingSocket1Name",
+              "caption": "Bezeichnung"
+            },
+            {
+              "type": "SelectVariable",
+              "name": "LivingSocket1Control",
+              "caption": "Schaltbefehl (Boolean)",
+              "validVariableTypes": [
+                0
+              ]
+            },
+            {
+              "type": "SelectVariable",
+              "name": "LivingSocket1Status",
+              "caption": "Schaltrückmeldung (optional)",
+              "validVariableTypes": [
+                0
+              ]
+            },
+            {
+              "type": "Label",
+              "caption": "Erscheint bei Aktivierung und zugeordneter Boolean-Schaltvariable."
+            }
+          ]
+        },
+        {
+          "type": "ExpansionPanel",
+          "caption": "Steckdosenkreis 2",
+          "items": [
+            {
+              "type": "CheckBox",
+              "name": "LivingSocket2Enabled",
+              "caption": "Schaltkreis aktiv"
+            },
+            {
+              "type": "ValidationTextBox",
+              "name": "LivingSocket2Name",
+              "caption": "Bezeichnung"
+            },
+            {
+              "type": "SelectVariable",
+              "name": "LivingSocket2Control",
+              "caption": "Schaltbefehl (Boolean)",
+              "validVariableTypes": [
+                0
+              ]
+            },
+            {
+              "type": "SelectVariable",
+              "name": "LivingSocket2Status",
+              "caption": "Schaltrückmeldung (optional)",
+              "validVariableTypes": [
+                0
+              ]
+            },
+            {
+              "type": "Label",
+              "caption": "Erscheint bei Aktivierung und zugeordneter Boolean-Schaltvariable."
+            }
+          ]
+        },
+        {
+          "type": "ExpansionPanel",
+          "caption": "Jalousie 1",
+          "items": [
+            {
+              "type": "CheckBox",
+              "name": "LivingBlind1Enabled",
+              "caption": "Rollladen aktiv (Bedienung und Fenster im Bild)"
+            },
+            {
+              "type": "ValidationTextBox",
+              "name": "LivingBlind1Name",
+              "caption": "Bezeichnung"
+            },
+            {
+              "type": "CheckBox",
+              "name": "LivingBlind1UseMove",
+              "caption": "Hoch/Runter anzeigen"
+            },
+            {
+              "type": "Select",
+              "name": "LivingBlind1CommandMode",
+              "caption": "Befehlsart",
+              "options": [
+                {
+                  "caption": "Getrennte KNX-Objekte: Auf/Ab und Stopp",
+                  "value": "separate"
+                },
+                {
+                  "caption": "Kombinierte Symcon-Befehlsvariable (Integer)",
+                  "value": "combined"
+                }
+              ]
+            },
+            {
+              "type": "SelectVariable",
+              "name": "LivingBlind1Move",
+              "caption": "Fahrvariable / kombinierte Befehlsvariable",
+              "validVariableTypes": [
+                0,
+                1
+              ]
+            },
+            {
+              "type": "CheckBox",
+              "name": "LivingBlind1DownValue",
+              "caption": "Abwärts sendet TRUE (aufwärts FALSE)"
+            },
+            {
+              "type": "CheckBox",
+              "name": "LivingBlind1UseStop",
+              "caption": "Stopp anzeigen"
+            },
+            {
+              "type": "SelectVariable",
+              "name": "LivingBlind1Stop",
+              "caption": "Stoppbefehl (Boolean)",
+              "validVariableTypes": [
+                0
+              ]
+            },
+            {
+              "type": "CheckBox",
+              "name": "LivingBlind1StopValue",
+              "caption": "Stopp sendet TRUE"
+            },
+            {
+              "type": "CheckBox",
+              "name": "LivingBlind1UsePosition",
+              "caption": "Positionsregler anzeigen"
+            },
+            {
+              "type": "SelectVariable",
+              "name": "LivingBlind1Position",
+              "caption": "Absolute Position",
+              "validVariableTypes": [
+                1,
+                2
+              ]
+            },
+            {
+              "type": "SelectVariable",
+              "name": "LivingBlind1Feedback",
+              "caption": "Positionsrückmeldung (optional)",
+              "validVariableTypes": [
+                1,
+                2
+              ]
+            },
+            {
+              "type": "Select",
+              "name": "LivingBlind1Maximum",
+              "caption": "Positionswertebereich",
+              "options": [
+                {
+                  "caption": "0–100 %",
+                  "value": 100
+                },
+                {
+                  "caption": "0–255",
+                  "value": 255
+                },
+                {
+                  "caption": "0–1 (Float)",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "type": "CheckBox",
+              "name": "LivingBlind1Invert",
+              "caption": "Variablenrichtung umkehren (Variable 0 = geschlossen)"
+            },
+            {
+              "type": "Label",
+              "caption": "Anzeige immer: 0 % offen, 100 % geschlossen. Für eine tatsächliche Positionsanzeige die Rückmeldung zuordnen. Die Fahr- und Stoppvariablen müssen bereits passende Aktionen in Symcon besitzen."
+            },
+            {
+              "type": "NumberSpinner",
+              "name": "LivingBlind1UpCommand",
+              "caption": "Kombiniert: Wert für Auf"
+            },
+            {
+              "type": "NumberSpinner",
+              "name": "LivingBlind1StopCommand",
+              "caption": "Kombiniert: Wert für Stopp"
+            },
+            {
+              "type": "NumberSpinner",
+              "name": "LivingBlind1DownCommand",
+              "caption": "Kombiniert: Wert für Ab"
+            },
+            {
+              "type": "Label",
+              "caption": "Getrennte KNX-Objekte: Auf/Ab (Bool) und Stopp-/Schrittobjekt (Bool) getrennt zuordnen. Dieselbe Variable für Fahren und Stopp wird blockiert. Kombiniert: Fahrvariable als Integer auswählen und alle drei Werte passend zur vorhandenen Symcon-Aktion eintragen. Die Vorgabewerte 0/1/2 sind kein KNX-Standard."
+            }
+          ]
+        },
+        {
+          "type": "ExpansionPanel",
+          "caption": "Jalousie 2",
+          "items": [
+            {
+              "type": "CheckBox",
+              "name": "LivingBlind2Enabled",
+              "caption": "Rollladen aktiv (Bedienung und Fenster im Bild)"
+            },
+            {
+              "type": "ValidationTextBox",
+              "name": "LivingBlind2Name",
+              "caption": "Bezeichnung"
+            },
+            {
+              "type": "CheckBox",
+              "name": "LivingBlind2UseMove",
+              "caption": "Hoch/Runter anzeigen"
+            },
+            {
+              "type": "Select",
+              "name": "LivingBlind2CommandMode",
+              "caption": "Befehlsart",
+              "options": [
+                {
+                  "caption": "Getrennte KNX-Objekte: Auf/Ab und Stopp",
+                  "value": "separate"
+                },
+                {
+                  "caption": "Kombinierte Symcon-Befehlsvariable (Integer)",
+                  "value": "combined"
+                }
+              ]
+            },
+            {
+              "type": "SelectVariable",
+              "name": "LivingBlind2Move",
+              "caption": "Fahrvariable / kombinierte Befehlsvariable",
+              "validVariableTypes": [
+                0,
+                1
+              ]
+            },
+            {
+              "type": "CheckBox",
+              "name": "LivingBlind2DownValue",
+              "caption": "Abwärts sendet TRUE (aufwärts FALSE)"
+            },
+            {
+              "type": "CheckBox",
+              "name": "LivingBlind2UseStop",
+              "caption": "Stopp anzeigen"
+            },
+            {
+              "type": "SelectVariable",
+              "name": "LivingBlind2Stop",
+              "caption": "Stoppbefehl (Boolean)",
+              "validVariableTypes": [
+                0
+              ]
+            },
+            {
+              "type": "CheckBox",
+              "name": "LivingBlind2StopValue",
+              "caption": "Stopp sendet TRUE"
+            },
+            {
+              "type": "CheckBox",
+              "name": "LivingBlind2UsePosition",
+              "caption": "Positionsregler anzeigen"
+            },
+            {
+              "type": "SelectVariable",
+              "name": "LivingBlind2Position",
+              "caption": "Absolute Position",
+              "validVariableTypes": [
+                1,
+                2
+              ]
+            },
+            {
+              "type": "SelectVariable",
+              "name": "LivingBlind2Feedback",
+              "caption": "Positionsrückmeldung (optional)",
+              "validVariableTypes": [
+                1,
+                2
+              ]
+            },
+            {
+              "type": "Select",
+              "name": "LivingBlind2Maximum",
+              "caption": "Positionswertebereich",
+              "options": [
+                {
+                  "caption": "0–100 %",
+                  "value": 100
+                },
+                {
+                  "caption": "0–255",
+                  "value": 255
+                },
+                {
+                  "caption": "0–1 (Float)",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "type": "CheckBox",
+              "name": "LivingBlind2Invert",
+              "caption": "Variablenrichtung umkehren (Variable 0 = geschlossen)"
+            },
+            {
+              "type": "Label",
+              "caption": "Anzeige immer: 0 % offen, 100 % geschlossen. Für eine tatsächliche Positionsanzeige die Rückmeldung zuordnen. Die Fahr- und Stoppvariablen müssen bereits passende Aktionen in Symcon besitzen."
+            },
+            {
+              "type": "NumberSpinner",
+              "name": "LivingBlind2UpCommand",
+              "caption": "Kombiniert: Wert für Auf"
+            },
+            {
+              "type": "NumberSpinner",
+              "name": "LivingBlind2StopCommand",
+              "caption": "Kombiniert: Wert für Stopp"
+            },
+            {
+              "type": "NumberSpinner",
+              "name": "LivingBlind2DownCommand",
+              "caption": "Kombiniert: Wert für Ab"
+            },
+            {
+              "type": "Label",
+              "caption": "Getrennte KNX-Objekte: Auf/Ab (Bool) und Stopp-/Schrittobjekt (Bool) getrennt zuordnen. Dieselbe Variable für Fahren und Stopp wird blockiert. Kombiniert: Fahrvariable als Integer auswählen und alle drei Werte passend zur vorhandenen Symcon-Aktion eintragen. Die Vorgabewerte 0/1/2 sind kein KNX-Standard."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ExpansionPanel",
+      "caption": "Gemeinsamer Heiz-/Klimakreis",
+      "items": [
+        {
+          "type": "CheckBox",
+          "name": "ClimateEnabled",
+          "caption": "Klimabereich anzeigen"
+        },
+        {
+          "type": "ValidationTextBox",
+          "name": "ClimateName",
+          "caption": "Bezeichnung"
+        },
+        {
+          "type": "SelectVariable",
+          "name": "ClimateActual",
+          "caption": "Isttemperatur (°C)",
+          "validVariableTypes": [
+            1,
+            2
+          ]
+        },
+        {
+          "type": "SelectVariable",
+          "name": "ClimateTarget",
+          "caption": "Sollwert schreiben (absolute Temperatur in °C)",
+          "validVariableTypes": [
+            1,
+            2
+          ]
+        },
+        {
+          "type": "SelectVariable",
+          "name": "ClimateFeedback",
+          "caption": "Sollwert-Rückmeldung (optional, °C)",
+          "validVariableTypes": [
+            1,
+            2
+          ]
+        },
+        {
+          "type": "NumberSpinner",
+          "name": "ClimateMin",
+          "caption": "Minimaler Sollwert (°C)"
+        },
+        {
+          "type": "NumberSpinner",
+          "name": "ClimateMax",
+          "caption": "Maximaler Sollwert (°C)"
+        },
+        {
+          "type": "Label",
+          "caption": "Die Regelung übernimmt der Aktor. Hier eine beschreibbare absolute Solltemperatur zuordnen, keine Sollwertverschiebung. Float-Variablen: 0,5-°C-Schritte; Integer: 1 °C. Istwert und Rückmeldung benötigen keine Aktion."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "{07E9D048-9A26-4F61-8E32-6E45CCD21BF1}",
+  "name": "Wohnbereich",
+  "type": 3,
+  "vendor": "CMelektro",
+  "aliases": [
+    "Wohnbereich – Tabletsteuerung"
+  ],
+  "parentRequirements": [],
+  "childRequirements": [],
+  "implemented": [],
+  "prefix": "WBR",
+  "url": ""
+}

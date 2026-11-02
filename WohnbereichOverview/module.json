@@ -1,0 +1,14 @@
+{
+  "id": "{806558EC-EE9D-472D-B71E-A2916ADC6353}",
+  "name": "WohnbereichOverview",
+  "type": 3,
+  "vendor": "CMelektro",
+  "aliases": [
+    "Wohnbereich – Status und Navigation"
+  ],
+  "parentRequirements": [],
+  "childRequirements": [],
+  "implemented": [],
+  "prefix": "WBRO",
+  "url": ""
+}

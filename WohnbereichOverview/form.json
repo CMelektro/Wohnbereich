@@ -1,0 +1,44 @@
+{
+  "elements": [
+    {
+      "type": "Label",
+      "caption": "Wohnbereich – Status und Navigation · 2.0.1"
+    },
+    {
+      "type": "SelectInstance",
+      "name": "Source",
+      "caption": "Quelle: Wohnbereich-Instanz",
+      "validModules": [
+        "{07E9D048-9A26-4F61-8E32-6E45CCD21BF1}"
+      ]
+    },
+    {
+      "type": "Label",
+      "caption": "Leuchtenarten, Aktivierung und Statusvariablen werden aus der Quelle übernommen. Diese Kachel schreibt keine Befehle."
+    },
+    {
+      "type": "ValidationTextBox",
+      "name": "Title",
+      "caption": "Titel der Übersicht"
+    },
+    {
+      "type": "CheckBox",
+      "name": "ShowTitle",
+      "caption": "Titel anzeigen"
+    },
+    {
+      "type": "CheckBox",
+      "name": "ShowTemperature",
+      "caption": "Isttemperatur anzeigen (wenn Klima in der Quelle aktiv ist)"
+    },
+    {
+      "type": "SelectCategory",
+      "name": "TargetCategory",
+      "caption": "Ziel-Raumkategorie (optional)"
+    },
+    {
+      "type": "Label",
+      "caption": "Ohne Ziel wird unter Symcon 9.0 die übergeordnete Kategorie der Quelle geöffnet. Kategorie und Wohnbereichskachel müssen in der Visu sichtbar sein. Die Quelle muss innerhalb ihrer Raumkategorie liegen. Ab SDK-Unterstützung für HTML-Vollbild kann die Quelle direkt geöffnet werden."
+    }
+  ]
+}

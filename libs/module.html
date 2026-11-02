@@ -1,0 +1,12 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Wohnbereich</title><style>/*WB_STYLE*/</style></head><body>
+<main id="dashboard" class="dashboard">
+<header id="topbar" class="topbar"><div class="heading"><h1 id="title">Wohnbereich</h1><p id="summary" class="summary"></p></div><div class="header-actions"><section id="climate" class="climate" hidden></section><button id="otherPageButton" class="nav-button" type="button" hidden>Weitere Räume</button><button id="homeButton" class="nav-button" type="button" hidden>← Wohnbereich</button><span id="openArrow" hidden aria-hidden="true">↗</span></div></header>
+<section id="homePage" class="home-page"><section id="sceneStage" class="panorama-stage" aria-label="Wohnbereich"><div id="panoramaCanvas" class="panorama-canvas"><img id="panoramaImage" alt="Gemeinsamer Wohnbereich mit Küche, Essplatz und Wohnzimmer"><div id="panoramaOverlays"></div><div id="sceneZones"></div></div></section><section id="controlDock" class="control-dock"><nav id="areaTabs" class="area-tabs" role="tablist" aria-label="Bereich auswählen"></nav><div id="areas" class="areas"></div></section></section>
+<section id="otherPage" class="other-page" hidden><nav id="roomNav" class="room-nav" aria-label="Weitere Räume"></nav><div id="otherControls" class="other-controls"></div></section>
+<p id="notice" class="notice" role="status" hidden></p>
+</main><div id="sheet" class="sheet-backdrop" hidden><section id="sheetPanel" class="sheet-panel" role="dialog" aria-modal="true" aria-labelledby="sheetTitle"><header><h2 id="sheetTitle"></h2><button id="closeSheet" class="close-button" type="button" aria-label="Schließen">×</button></header><div id="sheetContent"></div></section></div>
+<div id="bootNotice" class="boot-notice" role="status">Wohnbereich wird geladen …</div><div id="error" class="error" role="alert" hidden></div>
+<script>(function(){'use strict';
+/*WB_SCRIPT*/
+window.handleMessage(/*WB_INITIAL*/);
+})();</script></body></html>
